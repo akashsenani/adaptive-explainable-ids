@@ -1,0 +1,349 @@
+{
+    "input_type": "custom_live_input",
+    "dataset": "Farm-Flow",
+    "selected_model": "DNN",
+    "prediction": {
+        "class": 1,
+        "label": "Malicious",
+        "probability_class_0": 3.62396240234375e-05,
+        "probability_class_1": 0.9999637603759766,
+        "confidence": 0.9999637603759766
+    },
+    "actual_class": null,
+    "actual_label": null,
+    "class_mapping": {
+        "0": "Normal",
+        "1": "Malicious"
+    },
+    "explanations": {
+        "SHAP": {
+            "method": "SHAP",
+            "type": "local",
+            "base_value": 0.7930694791674614,
+            "feature_contributions": [
+                {
+                    "feature": "bwd_pkts_per_sec",
+                    "feature_value": -0.2685774617369022,
+                    "shap_value": 0.040900458065232306,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_per_sec",
+                    "feature_value": -0.2776997018915046,
+                    "shap_value": -0.04090045790934549,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "bwd_subflow_bytes",
+                    "feature_value": -0.4186231883085805,
+                    "shap_value": -0.023570405399954714,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.min",
+                    "feature_value": -0.0100561896868127,
+                    "shap_value": 0.022439230029381942,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.std",
+                    "feature_value": -0.4410805787679012,
+                    "shap_value": -0.022439229462102014,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.min",
+                    "feature_value": -0.2663553056472412,
+                    "shap_value": -0.02161828111891584,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.max",
+                    "feature_value": -0.5605445556997899,
+                    "shap_value": 0.021618281001248213,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "flow_pkts_per_sec",
+                    "feature_value": -0.2736258906096444,
+                    "shap_value": -0.014831479284888635,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "down_up_ratio",
+                    "feature_value": -1.3941922465532144,
+                    "shap_value": 0.01483147925717581,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.std",
+                    "feature_value": -0.4550901185655939,
+                    "shap_value": 0.013291350470228475,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.avg",
+                    "feature_value": -0.4417658505366696,
+                    "shap_value": -0.013291350174896799,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "bwd_data_pkts_tot",
+                    "feature_value": -0.4431226624746648,
+                    "shap_value": 0.010506794290761,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_data_pkts_tot",
+                    "feature_value": -0.5771400153106686,
+                    "shap_value": -0.010506794130771773,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_tot",
+                    "feature_value": -0.4542045023535366,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_pkts_tot",
+                    "feature_value": -0.6623872556860814,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_header_size_tot",
+                    "feature_value": -0.7242346885857164,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_header_size_min",
+                    "feature_value": -1.423581671685602,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_header_size_max",
+                    "feature_value": -1.352486072429361,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_header_size_tot",
+                    "feature_value": -0.7534702039929019,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_header_size_min",
+                    "feature_value": -1.4972560623924855,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_header_size_max",
+                    "feature_value": -1.4365044632423625,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_pkts_payload.tot",
+                    "feature_value": -0.7430937888033673,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_pkts_payload.avg",
+                    "feature_value": -0.5274165413276015,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_pkts_payload.max",
+                    "feature_value": -0.4595019484412692,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_pkts_payload.tot",
+                    "feature_value": -0.43172806487331,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "flow_pkts_payload.min",
+                    "feature_value": -0.0226456685421171,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "flow_pkts_payload.max",
+                    "feature_value": -0.5627201924433058,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "flow_pkts_payload.tot",
+                    "feature_value": -0.7445699612236413,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "flow_pkts_payload.avg",
+                    "feature_value": -0.5626486284933093,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "flow_pkts_payload.std",
+                    "feature_value": -0.5578055977354466,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_subflow_pkts",
+                    "feature_value": -0.5568738924281421,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_subflow_pkts",
+                    "feature_value": -0.6389862315871373,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_subflow_bytes",
+                    "feature_value": -0.7411863998277195,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                }
+            ]
+        },
+        "LIME": {
+            "method": "LIME",
+            "type": "local",
+            "explained_class": 1,
+            "explained_label": "Malicious",
+            "feature_contributions": [
+                {
+                    "feature": "fwd_subflow_pkts <= -0.56",
+                    "contribution": 0.07895365621069403,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_subflow_bytes <= -0.42",
+                    "contribution": -0.07612704500510674,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_header_size_max <= -0.25",
+                    "contribution": -0.06415801495427026,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.min <= -0.27",
+                    "contribution": -0.06279451529184495,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "down_up_ratio <= -1.13",
+                    "contribution": 0.05488889474825434,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.max <= -0.46",
+                    "contribution": 0.04851275878758665,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_data_pkts_tot <= -0.44",
+                    "contribution": -0.043495279626135294,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "-0.28 < fwd_pkts_per_sec <= -0.28",
+                    "contribution": 0.04048754849127748,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_subflow_pkts <= -0.56",
+                    "contribution": 0.03502940585997248,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.std <= -0.46",
+                    "contribution": 0.03197084766522128,
+                    "direction": "towards_predicted_class"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+  "NSL-KDD": "XGBoost",
+  "Farm-Flow": "XGBoost",
+  "IoMT-AI-IDS": "DNN"
+}

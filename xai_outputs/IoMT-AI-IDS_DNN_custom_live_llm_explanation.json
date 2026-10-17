@@ -1,0 +1,130 @@
+{
+    "threat_assessment": {
+        "prediction": "Malicious",
+        "confidence": 1.0
+    },
+    "model_information": {
+        "dataset": "IoMT-AI-IDS",
+        "selected_model": "DNN"
+    },
+    "key_xai_evidence": {
+        "towards_prediction": [
+            {
+                "feature": "bwd_data_pkts_tot",
+                "feature_value": -0.7469496476709985,
+                "shap_value": 0.6775156488454729
+            },
+            {
+                "feature": "flow_pkts_payload.std",
+                "feature_value": -0.528040593326587,
+                "shap_value": 0.05454131650766181
+            },
+            {
+                "feature": "bwd_pkts_payload.avg",
+                "feature_value": -0.5411579199225856,
+                "shap_value": 0.017960069281596925
+            },
+            {
+                "feature": "flow_pkts_per_sec",
+                "feature_value": -0.5304490963759833,
+                "shap_value": 0.012618971948025751
+            },
+            {
+                "feature": "fwd_pkts_tot",
+                "feature_value": -0.6744340845417338,
+                "shap_value": 0.009969469599545573
+            },
+            {
+                "feature": "fwd_pkts_payload.min",
+                "feature_value": 1.415849174593743,
+                "shap_value": 0.006164543084571908
+            }
+        ],
+        "against_prediction": [
+            {
+                "feature": "fwd_data_pkts_tot",
+                "feature_value": -0.4509081064494238,
+                "shap_value": -0.6775156470655738
+            },
+            {
+                "feature": "fwd_subflow_pkts",
+                "feature_value": -0.7924872444972575,
+                "shap_value": -0.05454131636155683
+            },
+            {
+                "feature": "bwd_pkts_payload.std",
+                "feature_value": -0.5234939807628861,
+                "shap_value": -0.01796006906533671
+            },
+            {
+                "feature": "down_up_ratio",
+                "feature_value": 0.2320520596124346,
+                "shap_value": -0.012618972197108105
+            },
+            {
+                "feature": "bwd_pkts_tot",
+                "feature_value": 70959476.0,
+                "shap_value": -0.009969470056958427
+            },
+            {
+                "feature": "fwd_pkts_payload.max",
+                "feature_value": -0.5171376625531465,
+                "shap_value": -0.006164543044971305
+            }
+        ],
+        "lime": [
+            {
+                "feature": "-0.38 < fwd_pkts_payload.min <= 1.42",
+                "contribution": -0.06902697616201885,
+                "direction": "away_from_predicted_class"
+            },
+            {
+                "feature": "bwd_header_size_max <= -0.68",
+                "contribution": -0.06506080671266774,
+                "direction": "away_from_predicted_class"
+            },
+            {
+                "feature": "bwd_header_size_min <= 0.02",
+                "contribution": -0.05180422665824904,
+                "direction": "away_from_predicted_class"
+            },
+            {
+                "feature": "-0.55 < fwd_data_pkts_tot <= -0.45",
+                "contribution": 0.03618002818694662,
+                "direction": "towards_predicted_class"
+            },
+            {
+                "feature": "bwd_pkts_tot > -0.62",
+                "contribution": -0.034466851620870986,
+                "direction": "away_from_predicted_class"
+            },
+            {
+                "feature": "-0.82 < bwd_header_size_tot <= -0.63",
+                "contribution": 0.02960652778370909,
+                "direction": "towards_predicted_class"
+            },
+            {
+                "feature": "down_up_ratio <= 0.23",
+                "contribution": -0.028127501411515737,
+                "direction": "away_from_predicted_class"
+            },
+            {
+                "feature": "bwd_pkts_payload.std <= -0.52",
+                "contribution": -0.023329001797591845,
+                "direction": "away_from_predicted_class"
+            },
+            {
+                "feature": "fwd_header_size_max <= -0.70",
+                "contribution": 0.022025322535262494,
+                "direction": "towards_predicted_class"
+            },
+            {
+                "feature": "bwd_data_pkts_tot <= -0.75",
+                "contribution": -0.010945616828231442,
+                "direction": "away_from_predicted_class"
+            }
+        ]
+    },
+    "interpretation": "The DNN model, trained on the IoMT-AI-IDS dataset, predicts this network flow as \"Malicious\" with a high confidence of 1.0. \n\nSHAP analysis indicates that the feature 'bwd_data_pkts_tot' with a value of -0.7469496476709985 strongly pushed the prediction towards \"Malicious\" (SHAP value: 0.6775156488454729). Other features contributing to the \"Malicious\" prediction include 'flow_pkts_payload.std' (-0.528040593326587), 'bwd_pkts_payload.avg' (-0.5411579199225856), 'flow_pkts_per_sec' (-0.5304490963759833), 'fwd_pkts_tot' (-0.6744340845417338), and 'fwd_pkts_payload.min' (1.415849174593743).\n\nConversely, the feature 'fwd_data_pkts_tot' with a value of -0.4509081064494238 strongly pushed the prediction away from \"Malicious\" and towards \"Normal\" (SHAP value: -0.6775156470655738). Other features pushing away from \"Malicious\" include 'fwd_subflow_pkts' (-0.7924872444972575), 'bwd_pkts_payload.std' (-0.5234939807628861), 'down_up_ratio' (0.2320520596124346), 'bwd_pkts_tot' (70959476.0), and 'fwd_pkts_payload.max' (-0.5171376625531465).\n\nLIME explanations highlight that the conditions \"-0.38 < fwd_pkts_payload.min <= 1.42\" (contribution: -0.06902697616201885) and \"bwd_header_size_max <= -0.68\" (contribution: -0.06506080671266774) pushed the prediction away from \"Malicious\". The conditions \"-0.55 < fwd_data_pkts_tot <= -0.45\" (contribution: 0.03618002818694662) and \"-0.82 < bwd_header_size_tot <= -0.63\" (contribution: 0.02960652778370909) pushed the prediction towards \"Malicious\".\n\nThere are some notable comparisons between SHAP and LIME. SHAP identified 'bwd_data_pkts_tot' as the strongest contributor towards \"Malicious\", while LIME's condition \"bwd_data_pkts_tot <= -0.75\" showed a negative contribution, pushing away from \"Malicious\". Conversely, SHAP identified 'fwd_data_pkts_tot' as the strongest contributor away from \"Malicious\", while LIME's condition \"-0.55 < fwd_data_pkts_tot <= -0.45\" showed a positive contribution towards \"Malicious\". These disagreements suggest different local interpretations of these features' impacts depending on the explanation method.",
+    "recommended_action": "Given the model's high confidence in classifying this flow as \"Malicious\" and the conflicting insights from SHAP and LIME regarding some key features, it is recommended to conduct a manual investigation of this specific network flow. Focus on the features identified by both SHAP and LIME as significant, particularly 'bwd_data_pkts_tot' and 'fwd_data_pkts_tot', to understand the underlying network behavior. Do not automatically block or isolate the source based solely on this prediction."
+}

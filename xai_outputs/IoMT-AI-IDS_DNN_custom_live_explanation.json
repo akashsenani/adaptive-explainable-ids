@@ -1,0 +1,349 @@
+{
+    "input_type": "custom_live_input",
+    "dataset": "IoMT-AI-IDS",
+    "selected_model": "DNN",
+    "prediction": {
+        "class": 1,
+        "label": "Malicious",
+        "probability_class_0": 0.0,
+        "probability_class_1": 1.0,
+        "confidence": 1.0
+    },
+    "actual_class": null,
+    "actual_label": null,
+    "class_mapping": {
+        "0": "Normal",
+        "1": "Malicious"
+    },
+    "explanations": {
+        "SHAP": {
+            "method": "SHAP",
+            "type": "local",
+            "base_value": 0.5272189331054689,
+            "feature_contributions": [
+                {
+                    "feature": "bwd_data_pkts_tot",
+                    "feature_value": -0.7469496476709985,
+                    "shap_value": 0.6775156488454729,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_data_pkts_tot",
+                    "feature_value": -0.4509081064494238,
+                    "shap_value": -0.6775156470655738,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "flow_pkts_payload.std",
+                    "feature_value": -0.528040593326587,
+                    "shap_value": 0.05454131650766181,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_subflow_pkts",
+                    "feature_value": -0.7924872444972575,
+                    "shap_value": -0.05454131636155683,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.avg",
+                    "feature_value": -0.5411579199225856,
+                    "shap_value": 0.017960069281596925,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.std",
+                    "feature_value": -0.5234939807628861,
+                    "shap_value": -0.01796006906533671,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "down_up_ratio",
+                    "feature_value": 0.2320520596124346,
+                    "shap_value": -0.012618972197108105,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "flow_pkts_per_sec",
+                    "feature_value": -0.5304490963759833,
+                    "shap_value": 0.012618971948025751,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_tot",
+                    "feature_value": 70959476.0,
+                    "shap_value": -0.009969470056958427,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_tot",
+                    "feature_value": -0.6744340845417338,
+                    "shap_value": 0.009969469599545573,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.min",
+                    "feature_value": 1.415849174593743,
+                    "shap_value": 0.006164543084571908,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.max",
+                    "feature_value": -0.5171376625531465,
+                    "shap_value": -0.006164543044971305,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_per_sec",
+                    "feature_value": -0.5726399400414495,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_pkts_per_sec",
+                    "feature_value": -0.46706599650982,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_header_size_tot",
+                    "feature_value": -0.6801787318078386,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_header_size_min",
+                    "feature_value": 0.0029667659895021,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_header_size_max",
+                    "feature_value": -0.7031589105595407,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_header_size_tot",
+                    "feature_value": -0.6341630118310394,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_header_size_min",
+                    "feature_value": 0.0155518796377964,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_header_size_max",
+                    "feature_value": -0.6759432135479712,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_pkts_payload.tot",
+                    "feature_value": -0.8114153392838812,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_pkts_payload.avg",
+                    "feature_value": -0.5280353906882629,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_pkts_payload.std",
+                    "feature_value": -0.519207123583936,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_pkts_payload.min",
+                    "feature_value": -0.6948805199238915,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_pkts_payload.max",
+                    "feature_value": -0.5837000766192274,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_pkts_payload.tot",
+                    "feature_value": -0.973886163760379,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "flow_pkts_payload.min",
+                    "feature_value": -0.0059186439138707,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "flow_pkts_payload.max",
+                    "feature_value": -0.5172392940476642,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "flow_pkts_payload.tot",
+                    "feature_value": -0.823662699894884,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "flow_pkts_payload.avg",
+                    "feature_value": -0.5578569059876942,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_subflow_pkts",
+                    "feature_value": -0.886107624725461,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "fwd_subflow_bytes",
+                    "feature_value": -0.8056875960487347,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "bwd_subflow_bytes",
+                    "feature_value": -0.9928190795303272,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                }
+            ]
+        },
+        "LIME": {
+            "method": "LIME",
+            "type": "local",
+            "explained_class": 1,
+            "explained_label": "Malicious",
+            "feature_contributions": [
+                {
+                    "feature": "-0.38 < fwd_pkts_payload.min <= 1.42",
+                    "contribution": -0.06902697616201885,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "bwd_header_size_max <= -0.68",
+                    "contribution": -0.06506080671266774,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "bwd_header_size_min <= 0.02",
+                    "contribution": -0.05180422665824904,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "-0.55 < fwd_data_pkts_tot <= -0.45",
+                    "contribution": 0.03618002818694662,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_tot > -0.62",
+                    "contribution": -0.034466851620870986,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "-0.82 < bwd_header_size_tot <= -0.63",
+                    "contribution": 0.02960652778370909,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "down_up_ratio <= 0.23",
+                    "contribution": -0.028127501411515737,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.std <= -0.52",
+                    "contribution": -0.023329001797591845,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_header_size_max <= -0.70",
+                    "contribution": 0.022025322535262494,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_data_pkts_tot <= -0.75",
+                    "contribution": -0.010945616828231442,
+                    "direction": "away_from_predicted_class"
+                }
+            ]
+        }
+    }
+}

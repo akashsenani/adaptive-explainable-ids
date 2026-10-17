@@ -1,0 +1,349 @@
+{
+    "input_type": "custom_live_input",
+    "dataset": "Farm-Flow",
+    "selected_model": "XGBoost",
+    "prediction": {
+        "class": 1,
+        "label": "Malicious",
+        "probability_class_0": 1.0848045349121094e-05,
+        "probability_class_1": 0.9999891519546509,
+        "confidence": 0.9999891519546509
+    },
+    "actual_class": null,
+    "actual_label": null,
+    "class_mapping": {
+        "0": "Normal",
+        "1": "Malicious"
+    },
+    "explanations": {
+        "SHAP": {
+            "method": "SHAP",
+            "type": "local",
+            "base_value": 0.8696469664573669,
+            "feature_contributions": [
+                {
+                    "feature": "bwd_pkts_per_sec",
+                    "feature_value": -0.26797547860370363,
+                    "shap_value": 4.180558204650879,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_subflow_pkts",
+                    "feature_value": -0.38667661747971027,
+                    "shap_value": 1.7065649032592773,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "flow_pkts_per_sec",
+                    "feature_value": -0.27303659228298327,
+                    "shap_value": -1.0773510932922363,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_per_sec",
+                    "feature_value": -0.2771188073355404,
+                    "shap_value": 1.0062979459762573,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_header_size_tot",
+                    "feature_value": -0.4830617279141744,
+                    "shap_value": 0.7593026757240295,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_header_size_min",
+                    "feature_value": 0.3308947464263613,
+                    "shap_value": 0.6761441230773926,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.tot",
+                    "feature_value": -0.7430937888033673,
+                    "shap_value": 0.6642175912857056,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_data_pkts_tot",
+                    "feature_value": -0.5771400153106686,
+                    "shap_value": 0.5505179762840271,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_header_size_max",
+                    "feature_value": -0.2532073812645823,
+                    "shap_value": 0.49549442529678345,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.std",
+                    "feature_value": -0.4550901185655939,
+                    "shap_value": 0.44339805841445923,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_header_size_max",
+                    "feature_value": 0.2061399328249191,
+                    "shap_value": 0.33932971954345703,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.avg",
+                    "feature_value": -0.5274165413276015,
+                    "shap_value": 0.23520810902118683,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "flow_pkts_payload.tot",
+                    "feature_value": -0.7445699612236413,
+                    "shap_value": 0.20425908267498016,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "down_up_ratio",
+                    "feature_value": 0.5914910795428199,
+                    "shap_value": 0.17511820793151855,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.std",
+                    "feature_value": -0.4410805787679012,
+                    "shap_value": 0.13126935064792633,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_header_size_tot",
+                    "feature_value": -0.5199857238695227,
+                    "shap_value": -0.13036079704761505,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_tot",
+                    "feature_value": -0.4542045023535366,
+                    "shap_value": 0.0919838696718216,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_subflow_bytes",
+                    "feature_value": -0.4186231883085805,
+                    "shap_value": -0.07830478250980377,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.avg",
+                    "feature_value": -0.4417658505366696,
+                    "shap_value": 0.07670997083187103,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_subflow_pkts",
+                    "feature_value": -0.4194177561520665,
+                    "shap_value": 0.06585829704999924,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "flow_pkts_payload.max",
+                    "feature_value": -0.5627201924433058,
+                    "shap_value": -0.05538934841752052,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "flow_pkts_payload.avg",
+                    "feature_value": -0.5626486284933093,
+                    "shap_value": 0.04945516958832741,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_tot",
+                    "feature_value": -0.4578128259269856,
+                    "shap_value": 0.04777370020747185,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_header_size_min",
+                    "feature_value": -0.1470531468934397,
+                    "shap_value": 0.040035005658864975,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.max",
+                    "feature_value": -0.4595019484412692,
+                    "shap_value": -0.029106412082910538,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "bwd_data_pkts_tot",
+                    "feature_value": -0.4431226624746648,
+                    "shap_value": 0.024110063910484314,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "flow_pkts_payload.std",
+                    "feature_value": -0.5578055977354466,
+                    "shap_value": -0.023905187845230103,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.tot",
+                    "feature_value": -0.43172806487331,
+                    "shap_value": -0.014858642593026161,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.max",
+                    "feature_value": -0.5605445556997899,
+                    "shap_value": 0.008843110874295235,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_pkts_payload.min",
+                    "feature_value": -0.2663553056472412,
+                    "shap_value": -0.0038026925176382065,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "fwd_subflow_bytes",
+                    "feature_value": -0.7411863998277195,
+                    "shap_value": 0.002047081245109439,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.min",
+                    "feature_value": -0.0100561896868127,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "flow_pkts_payload.min",
+                    "feature_value": -0.0226456685421171,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                }
+            ]
+        },
+        "LIME": {
+            "method": "LIME",
+            "type": "local",
+            "explained_class": 1,
+            "explained_label": "Malicious",
+            "feature_contributions": [
+                {
+                    "feature": "-0.27 < flow_pkts_per_sec <= -0.27",
+                    "contribution": -0.05654321991373419,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "-0.27 < bwd_pkts_per_sec <= -0.27",
+                    "contribution": 0.04218092513852405,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_header_size_min <= -0.15",
+                    "contribution": -0.03047064877913781,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "-0.28 < fwd_pkts_per_sec <= -0.28",
+                    "contribution": 0.026482175467473005,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "-0.68 < fwd_header_size_tot <= -0.48",
+                    "contribution": 0.020523001419096003,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.avg <= -0.44",
+                    "contribution": 0.019592105539589903,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "flow_pkts_payload.avg <= -0.56",
+                    "contribution": 0.014542846906536054,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "fwd_header_size_max <= -0.25",
+                    "contribution": 0.012279846933167131,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "bwd_pkts_payload.tot <= -0.43",
+                    "contribution": -0.01221322565789699,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "-0.56 < fwd_subflow_pkts <= -0.39",
+                    "contribution": 0.011821118330573534,
+                    "direction": "towards_predicted_class"
+                }
+            ]
+        }
+    }
+}

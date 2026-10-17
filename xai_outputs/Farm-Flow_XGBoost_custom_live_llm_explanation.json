@@ -1,0 +1,225 @@
+{
+    "threat_assessment": {
+        "prediction": "Malicious",
+        "confidence": 0.9999891519546509
+    },
+    "model_information": {
+        "dataset": "Farm-Flow",
+        "selected_model": "XGBoost"
+    },
+    "key_xai_evidence": {
+        "towards_prediction": [
+            {
+                "feature": "bwd_pkts_per_sec",
+                "feature_value": -0.26797547860370363,
+                "shap_value": 4.180558204650879
+            },
+            {
+                "feature": "fwd_subflow_pkts",
+                "feature_value": -0.38667661747971027,
+                "shap_value": 1.7065649032592773
+            },
+            {
+                "feature": "fwd_pkts_per_sec",
+                "feature_value": -0.2771188073355404,
+                "shap_value": 1.0062979459762573
+            },
+            {
+                "feature": "fwd_header_size_tot",
+                "feature_value": -0.4830617279141744,
+                "shap_value": 0.7593026757240295
+            },
+            {
+                "feature": "bwd_header_size_min",
+                "feature_value": 0.3308947464263613,
+                "shap_value": 0.6761441230773926
+            },
+            {
+                "feature": "fwd_pkts_payload.tot",
+                "feature_value": -0.7430937888033673,
+                "shap_value": 0.6642175912857056
+            },
+            {
+                "feature": "fwd_data_pkts_tot",
+                "feature_value": -0.5771400153106686,
+                "shap_value": 0.5505179762840271
+            },
+            {
+                "feature": "fwd_header_size_max",
+                "feature_value": -0.2532073812645823,
+                "shap_value": 0.49549442529678345
+            },
+            {
+                "feature": "bwd_pkts_payload.std",
+                "feature_value": -0.4550901185655939,
+                "shap_value": 0.44339805841445923
+            },
+            {
+                "feature": "bwd_header_size_max",
+                "feature_value": 0.2061399328249191,
+                "shap_value": 0.33932971954345703
+            },
+            {
+                "feature": "fwd_pkts_payload.avg",
+                "feature_value": -0.5274165413276015,
+                "shap_value": 0.23520810902118683
+            },
+            {
+                "feature": "flow_pkts_payload.tot",
+                "feature_value": -0.7445699612236413,
+                "shap_value": 0.20425908267498016
+            },
+            {
+                "feature": "down_up_ratio",
+                "feature_value": 0.5914910795428199,
+                "shap_value": 0.17511820793151855
+            },
+            {
+                "feature": "fwd_pkts_payload.std",
+                "feature_value": -0.4410805787679012,
+                "shap_value": 0.13126935064792633
+            },
+            {
+                "feature": "fwd_pkts_tot",
+                "feature_value": -0.4542045023535366,
+                "shap_value": 0.0919838696718216
+            },
+            {
+                "feature": "bwd_pkts_payload.avg",
+                "feature_value": -0.4417658505366696,
+                "shap_value": 0.07670997083187103
+            },
+            {
+                "feature": "bwd_subflow_pkts",
+                "feature_value": -0.4194177561520665,
+                "shap_value": 0.06585829704999924
+            },
+            {
+                "feature": "flow_pkts_payload.avg",
+                "feature_value": -0.5626486284933093,
+                "shap_value": 0.04945516958832741
+            },
+            {
+                "feature": "bwd_pkts_tot",
+                "feature_value": -0.4578128259269856,
+                "shap_value": 0.04777370020747185
+            },
+            {
+                "feature": "fwd_header_size_min",
+                "feature_value": -0.1470531468934397,
+                "shap_value": 0.040035005658864975
+            },
+            {
+                "feature": "bwd_data_pkts_tot",
+                "feature_value": -0.4431226624746648,
+                "shap_value": 0.024110063910484314
+            },
+            {
+                "feature": "fwd_pkts_payload.max",
+                "feature_value": -0.5605445556997899,
+                "shap_value": 0.008843110874295235
+            },
+            {
+                "feature": "fwd_subflow_bytes",
+                "feature_value": -0.7411863998277195,
+                "shap_value": 0.002047081245109439
+            }
+        ],
+        "against_prediction": [
+            {
+                "feature": "flow_pkts_per_sec",
+                "feature_value": -0.27303659228298327,
+                "shap_value": -1.0773510932922363
+            },
+            {
+                "feature": "bwd_header_size_tot",
+                "feature_value": -0.5199857238695227,
+                "shap_value": -0.13036079704761505
+            },
+            {
+                "feature": "bwd_subflow_bytes",
+                "feature_value": -0.4186231883085805,
+                "shap_value": -0.07830478250980377
+            },
+            {
+                "feature": "flow_pkts_payload.max",
+                "feature_value": -0.5627201924433058,
+                "shap_value": -0.05538934841752052
+            },
+            {
+                "feature": "bwd_pkts_payload.max",
+                "feature_value": -0.4595019484412692,
+                "shap_value": -0.029106412082910538
+            },
+            {
+                "feature": "flow_pkts_payload.std",
+                "feature_value": -0.5578055977354466,
+                "shap_value": -0.023905187845230103
+            },
+            {
+                "feature": "bwd_pkts_payload.tot",
+                "feature_value": -0.43172806487331,
+                "shap_value": -0.014858642593026161
+            },
+            {
+                "feature": "fwd_pkts_payload.min",
+                "feature_value": -0.2663553056472412,
+                "shap_value": -0.0038026925176382065
+            }
+        ],
+        "lime": [
+            {
+                "feature": "-0.27 < flow_pkts_per_sec <= -0.27",
+                "contribution": -0.05654321991373419,
+                "direction": "away_from_predicted_class"
+            },
+            {
+                "feature": "-0.27 < bwd_pkts_per_sec <= -0.27",
+                "contribution": 0.04218092513852405,
+                "direction": "towards_predicted_class"
+            },
+            {
+                "feature": "fwd_header_size_min <= -0.15",
+                "contribution": -0.03047064877913781,
+                "direction": "away_from_predicted_class"
+            },
+            {
+                "feature": "-0.28 < fwd_pkts_per_sec <= -0.28",
+                "contribution": 0.026482175467473005,
+                "direction": "towards_predicted_class"
+            },
+            {
+                "feature": "-0.68 < fwd_header_size_tot <= -0.48",
+                "contribution": 0.020523001419096003,
+                "direction": "towards_predicted_class"
+            },
+            {
+                "feature": "bwd_pkts_payload.avg <= -0.44",
+                "contribution": 0.019592105539589903,
+                "direction": "towards_predicted_class"
+            },
+            {
+                "feature": "flow_pkts_payload.avg <= -0.56",
+                "contribution": 0.014542846906536054,
+                "direction": "towards_predicted_class"
+            },
+            {
+                "feature": "fwd_header_size_max <= -0.25",
+                "contribution": 0.012279846933167131,
+                "direction": "towards_predicted_class"
+            },
+            {
+                "feature": "bwd_pkts_payload.tot <= -0.43",
+                "contribution": -0.01221322565789699,
+                "direction": "away_from_predicted_class"
+            },
+            {
+                "feature": "-0.56 < fwd_subflow_pkts <= -0.39",
+                "contribution": 0.011821118330573534,
+                "direction": "towards_predicted_class"
+            }
+        ]
+    },
+    "interpretation": "The model, an XGBoost trained on the Farm-Flow dataset, predicts this network flow as \"Malicious\" with a high confidence of 0.9999891519546509.\n\nSHAP analysis indicates that several features strongly contributed to this \"Malicious\" prediction. The most significant contributors include `bwd_pkts_per_sec` with a value of -0.26797547860370363 (SHAP value: 4.180558204650879), `fwd_subflow_pkts` with a value of -0.38667661747971027 (SHAP value: 1.7065649032592773), and `fwd_pkts_per_sec` with a value of -0.2771188073355404 (SHAP value: 1.0062979459762573). Other notable features pushing towards \"Malicious\" include `fwd_header_size_tot` (-0.4830617279141744), `bwd_header_size_min` (0.3308947464263613), and `fwd_pkts_payload.tot` (-0.7430937888033673).\n\nConversely, some features pushed the prediction away from \"Malicious\" (towards \"Normal\"), though with lesser magnitude. The most prominent of these is `flow_pkts_per_sec` with a value of -0.27303659228298327 (SHAP value: -1.0773510932922363). Other features contributing away from the predicted class include `bwd_header_size_tot` (-0.5199857238695227) and `bwd_subflow_bytes` (-0.4186231883085805).\n\nLIME explanations largely align with SHAP for the top features. LIME also identifies `flow_pkts_per_sec` (`-0.27 < flow_pkts_per_sec <= -0.27`) as the strongest feature pushing away from the \"Malicious\" prediction (contribution: -0.05654321991373419). Similarly, `bwd_pkts_per_sec` (`-0.27 < bwd_pkts_per_sec <= -0.27`) is identified by LIME as a strong contributor towards the \"Malicious\" prediction (contribution: 0.04218092513852405), consistent with SHAP. `fwd_pkts_per_sec` (`-0.28 < fwd_pkts_per_sec <= -0.28`) and `fwd_header_size_tot` (`-0.68 < fwd_header_size_tot <= -0.48`) are also highlighted by LIME as contributing towards the \"Malicious\" class, reinforcing the SHAP findings. A minor disagreement is seen with `fwd_header_size_min`, which SHAP shows as slightly towards \"Malicious\" (0.040035005658864975), but LIME shows as slightly away (`fwd_header_size_min <= -0.15`, contribution: -0.03047064877913781).\n\nOverall, both explanation methods highlight similar key features driving the \"Malicious\" classification, particularly related to packet rates and header sizes in both forward and backward directions.",
+    "recommended_action": "Given the high confidence \"Malicious\" prediction by the XGBoost model, it is recommended to investigate this network flow further. Review the full network flow details, associated source/destination IPs, and port numbers. Cross-reference with other security logs and threat intelligence feeds. Manual inspection by a human analyst is advised to confirm the nature of this activity. Avoid automatic blocking or isolation based solely on this model prediction."
+}

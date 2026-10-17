@@ -1,0 +1,421 @@
+{
+    "input_type": "custom_live_input",
+    "dataset": "NSL-KDD",
+    "selected_model": "XGBoost",
+    "prediction": {
+        "class": 1,
+        "label": "Malicious",
+        "probability_class_0": 2.384185791015625e-07,
+        "probability_class_1": 0.9999997615814209,
+        "confidence": 0.9999997615814209
+    },
+    "actual_class": null,
+    "actual_label": null,
+    "class_mapping": {
+        "0": "Normal",
+        "1": "Malicious"
+    },
+    "explanations": {
+        "SHAP": {
+            "method": "SHAP",
+            "type": "local",
+            "base_value": 0.09687064588069916,
+            "feature_contributions": [
+                {
+                    "feature": "level",
+                    "feature_value": 21.0,
+                    "shap_value": 5.3830437660217285,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "src_bytes",
+                    "feature_value": 245.0,
+                    "shap_value": 3.77465558052063,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "count",
+                    "feature_value": 2.0,
+                    "shap_value": 1.113499641418457,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "service",
+                    "feature_value": 20.0,
+                    "shap_value": 0.8894349932670593,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "protocol_type",
+                    "feature_value": 1.0,
+                    "shap_value": 0.8363549709320068,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_host_srv_serror_rate",
+                    "feature_value": 0.0,
+                    "shap_value": 0.5307132601737976,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_host_srv_diff_host_rate",
+                    "feature_value": 0.02,
+                    "shap_value": 0.5202447175979614,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_host_count",
+                    "feature_value": 8.0,
+                    "shap_value": 0.5075505375862122,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_host_rerror_rate",
+                    "feature_value": 0.0,
+                    "shap_value": 0.496192991733551,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_host_srv_count",
+                    "feature_value": 87.0,
+                    "shap_value": -0.3841741681098938,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "dst_host_same_srv_rate",
+                    "feature_value": 0.25,
+                    "shap_value": 0.35723286867141724,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_bytes",
+                    "feature_value": 0.0,
+                    "shap_value": -0.2820688784122467,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "dst_host_diff_srv_rate",
+                    "feature_value": 0.38,
+                    "shap_value": 0.2720307409763336,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "flag",
+                    "feature_value": 9.0,
+                    "shap_value": 0.23472611606121063,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_host_serror_rate",
+                    "feature_value": 0.0,
+                    "shap_value": 0.21378254890441895,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "diff_srv_rate",
+                    "feature_value": 0.0,
+                    "shap_value": 0.18728245794773102,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "duration",
+                    "feature_value": 0.0,
+                    "shap_value": 0.16498000919818878,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "same_srv_rate",
+                    "feature_value": 1.0,
+                    "shap_value": 0.14255240559577942,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_host_srv_rerror_rate",
+                    "feature_value": 0.0,
+                    "shap_value": -0.11276848614215851,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "hot",
+                    "feature_value": 0.0,
+                    "shap_value": 0.09257981181144714,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "srv_count",
+                    "feature_value": 2.0,
+                    "shap_value": 0.09033901244401932,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "serror_rate",
+                    "feature_value": 0.0,
+                    "shap_value": 0.07846365123987198,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "logged_in",
+                    "feature_value": 0.0,
+                    "shap_value": 0.06089990586042404,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "srv_serror_rate",
+                    "feature_value": 0.0,
+                    "shap_value": 0.04195704311132431,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_host_same_src_port_rate",
+                    "feature_value": 0.25,
+                    "shap_value": 0.03454742953181267,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "wrong_fragment",
+                    "feature_value": 0.0,
+                    "shap_value": 0.03240270912647247,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "rerror_rate",
+                    "feature_value": 0.0,
+                    "shap_value": 0.03072824887931347,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "num_root",
+                    "feature_value": 0.0,
+                    "shap_value": -0.015120776370167732,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "srv_rerror_rate",
+                    "feature_value": 0.0,
+                    "shap_value": 0.010239900089800358,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "is_guest_login",
+                    "feature_value": 0.0,
+                    "shap_value": 0.008829934522509575,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "num_compromised",
+                    "feature_value": 0.0,
+                    "shap_value": 0.008603307418525219,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "srv_diff_host_rate",
+                    "feature_value": 0.0,
+                    "shap_value": 0.005357027985155582,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "num_failed_logins",
+                    "feature_value": 0.0,
+                    "shap_value": 0.00031539698829874396,
+                    "contribution_class": 1,
+                    "contribution_label": "Malicious",
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "root_shell",
+                    "feature_value": 0.0,
+                    "shap_value": -1.9441367840045132e-05,
+                    "contribution_class": 0,
+                    "contribution_label": "Normal",
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "land",
+                    "feature_value": 0.0,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "urgent",
+                    "feature_value": 0.0,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "su_attempted",
+                    "feature_value": 0.0,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "num_file_creations",
+                    "feature_value": 0.0,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "num_shells",
+                    "feature_value": 0.0,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "num_access_files",
+                    "feature_value": 0.0,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "num_outbound_cmds",
+                    "feature_value": 0.0,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                },
+                {
+                    "feature": "is_host_login",
+                    "feature_value": 0.0,
+                    "shap_value": 0.0,
+                    "contribution_class": null,
+                    "contribution_label": "None",
+                    "direction": "no_contribution"
+                }
+            ]
+        },
+        "LIME": {
+            "method": "LIME",
+            "type": "local",
+            "explained_class": 1,
+            "explained_label": "Malicious",
+            "feature_contributions": [
+                {
+                    "feature": "protocol_type <= 1.00",
+                    "contribution": -0.4211099532829942,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "srv_count <= 2.75",
+                    "contribution": 0.1389284093170717,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_bytes <= 0.00",
+                    "contribution": -0.13378816476240524,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "count <= 4.75",
+                    "contribution": 0.11758584671131937,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "wrong_fragment <= 0.00",
+                    "contribution": 0.10327493427093919,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_host_srv_serror_rate <= 0.00",
+                    "contribution": 0.07462090597217998,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "is_guest_login <= 0.00",
+                    "contribution": -0.07447122316573479,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "service <= 20.00",
+                    "contribution": -0.0737260523850757,
+                    "direction": "away_from_predicted_class"
+                },
+                {
+                    "feature": "dst_host_rerror_rate <= 0.00",
+                    "contribution": 0.0672636208954562,
+                    "direction": "towards_predicted_class"
+                },
+                {
+                    "feature": "dst_host_serror_rate <= 0.00",
+                    "contribution": 0.05984126184417652,
+                    "direction": "towards_predicted_class"
+                }
+            ]
+        }
+    }
+}
