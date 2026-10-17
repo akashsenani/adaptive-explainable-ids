@@ -1436,15 +1436,67 @@ def generate_shap_explanation(
         feature_names
     ]
 
-    if model_name == "XGBoost":
+        if model_name == "XGBoost":
 
-        explainer = shap.TreeExplainer(
-            model
-        )
+        try:
+            # Preferred: fast tree-based SHAP
+            explainer = shap.TreeExplainer(model)
+            explanation = explainer(input_df)
 
-        explanation = explainer(
-            input_df
-        )
+            values = np.asarray(
+                explanation.values
+            ).reshape(1, -1)[0]
+
+            base_value = float(
+                np.asarray(
+                    explanation.base_values
+                ).reshape(-1)[0]
+            )
+
+        except Exception as tree_error:
+            # Fallback: avoids SHAP's XGBoost tree-model parser
+            st.warning(
+                "TreeSHAP is incompatible with this model format. "
+                "Using model-agnostic SHAP instead."
+            )
+
+            background_size = min(30, len(X_train))
+            background = X_train.sample(
+                background_size,
+                random_state=42
+            ).astype(float)
+
+            def xgb_predict_probability(X):
+                X_df = pd.DataFrame(
+                    X,
+                    columns=feature_names
+                )
+                return model.predict_proba(X_df)[:, 1]
+
+            explainer = shap.KernelExplainer(
+                xgb_predict_probability,
+                background.to_numpy()
+            )
+
+            shap_values = explainer.shap_values(
+                input_df[feature_names].to_numpy(),
+                nsamples=100
+            )
+
+            values = np.asarray(
+                shap_values
+            ).reshape(1, -1)[0]
+
+            base_value = float(
+                np.asarray(
+                    explainer.expected_value
+                ).reshape(-1)[0]
+            )
+
+        return {
+            "base_value": base_value,
+            "values": values
+        }
 
     else:
 
