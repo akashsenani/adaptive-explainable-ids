@@ -1436,7 +1436,7 @@ def generate_shap_explanation(
         feature_names
     ]
 
-        if model_name == "XGBoost":
+    if model_name == "XGBoost":
 
         try:
             # Preferred: fast tree-based SHAP
